@@ -23,3 +23,8 @@ def get_average_goals(goals):
     """This function recieves the number of goals and returns the average per match value"""
     average_goals = sum(goals) / 25
     return average_goals
+
+def max_goalscorer_average(goals):
+    """This function recieves a number of goals returns the average goals per match value"""
+    average = goals / 25
+    return average
