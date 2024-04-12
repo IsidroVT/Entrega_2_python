@@ -12,3 +12,9 @@ def get_max_goalscorer(dic):
     """This function recieves the player dictionary and returns the player who scored the most goals and the number of goals"""
     max_scorer, max_goals = max(dic.items(), key = lambda x: x[1][0])
     return max_scorer, max_goals[0]
+
+def get_most_influent_player(dic):
+    """This function recieves the player dictionary and returns the most influent player"""
+    influence_list = [(name, (stats[0] * 1.5 + stats[1] * 1.25 + stats[2])) for name, stats in dic.items()]
+    most_influent = max(influence_list, key = lambda x: x[1])
+    return most_influent[0]
