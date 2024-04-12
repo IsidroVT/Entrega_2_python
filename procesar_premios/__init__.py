@@ -7,3 +7,8 @@ def set_player_dictionary(names, goals, goals_avoided, assists):
         dic_players[name] = (goals[index], goals_avoided[index], assists[index]) 
         index += 1
     return dic_players
+
+def get_max_goalscorer(dic):
+    """This function recieves the player dictionary and returns the player who scored the most goals and the number of goals"""
+    max_scorer, max_goals = max(dic.items(), key = lambda x: x[1][0])
+    return max_scorer, max_goals[0]
